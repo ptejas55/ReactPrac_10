@@ -1,11 +1,12 @@
-import React from "react";
-import "./style.css";
+import React, { useState } from 'react';
 
 export default function App() {
+  const [show, setShow] = useState(true);
   return (
     <div>
-      <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
+      <button onClick={() => setShow(!show)}>Hide elemnt below </button>
+      <br />
+      {show ? 'Toggle' : ''}
     </div>
   );
 }
